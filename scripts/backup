@@ -40,7 +40,7 @@ backup() {
     --dbname="$dbname"
 }
 
-destination="$root_dir/backups/$(date +%Y)/$(date +%m)/$(date +%d)/$(date +%s).sql.gz"
+destination="$script_dir/../backups/$(date +%Y)/$(date +%m)/$(date +%d)/$(date +%s).sql.gz"
 port="$(extract_variable "POSTGRES_PORT" "$script_dir/../.env")"
 user="$(extract_variable "POSTGRES_USER" "$script_dir/../.env")"
 password="$(extract_variable "POSTGRES_PASSWORD" "$script_dir/../.env")"
